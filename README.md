@@ -1,1 +1,1 @@
-# smart-bet
+# Find The Vibe
