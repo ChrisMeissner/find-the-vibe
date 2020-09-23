@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #CC4B1A;
+    --secondary-color: #E9E5C2;
+    --tertiary-color: #058082;
+    --quaternary-color: #DCA02F;
+}
+
+body {
+    font-family: 'Ranchers';
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header img{
+    padding: 20px 35px;
+    width: 50%;
+    z-index: 9999;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 33.33%;
+}
+
+.form-label {
+    width: 30%;
+    font-size: 36px;
+    padding: 10px 0px 5px 20px;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 30%;
+    font-size: 30px;
+    padding: 10px 0px 5px 20px;
+    margin: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#btn_submit {
+    margin: 20px;
+    padding: 10px 0px 5px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.api-one {
+    background-color: var(--tertiary-color);
+    width: 33.33%;
+}
+
+.api-two {
+    background-color: var(--quaternary-color);
+    width: 33.33%;
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
