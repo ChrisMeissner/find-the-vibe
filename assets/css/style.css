@@ -1,0 +1,26 @@
+:root {
+    --primary: hsl(17, 77%, 45%);
+    --secondary: #E9E5C2;
+    --tertiary: #058082;
+    --quaternary: #DCA02F;
+}
+
+body {
+    font-family: 'Ranchers', cursive;
+}
+
+header {
+    background-color: var(--primary);
+}
+
+.first {
+    background-color: var(--secondary);
+}
+
+.second {
+    background-color: var(--quaternary);
+}
+
+.third {
+    background-color: var(--tertiary);
+}
