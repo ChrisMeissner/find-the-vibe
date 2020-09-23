@@ -167,13 +167,13 @@ const UIController = (function() {
 
             const html = 
             `
-            <div class="row col-sm-12 px-0">
+            <div class="">
                 <img src="${img}" alt="">        
             </div>
-            <div class="row col-sm-12 px-0">
+            <div class=">
                 <label for="Genre" class="form-label col-sm-12">${title}:</label>
             </div>
-            <div class="row col-sm-12 px-0">
+            <div class="">
                 <label for="artist" class="form-label col-sm-12">By ${artist}:</label>
             </div> 
             <div>
