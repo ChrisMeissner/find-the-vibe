@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary: hsl(17, 77%, 45%);
     --secondary: #E9E5C2;
@@ -5,25 +11,87 @@
     --quaternary: #DCA02F;
 }
 
-body, h4 {
+body, h2, h3 {
     font-family: 'Ranchers', cursive;
+}
+
+.title {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.songs {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 header {
     background-color: var(--primary);
+    display: flex;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-label {
+    width: 40%;
+    font-size: 36px;
+    padding: 10px 0px 5px 20px;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 40%;
+    font-size: 25px;
+    margin: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .first {
     background-color: var(--secondary);
+    color: var(--primary);
+    width: 33.33%;
+}
+
+button {
     color: var(--primary);
 }
 
 .second {
     background-color: var(--quaternary);
     color: var(--secondary);
+    width: 33.33%;
+}
+
+.song-info {
+    font-size: 20px;
+    color: var(--secondary);
 }
 
 .third {
     background-color: var(--tertiary);
     color: var(--quaternary);
+    width: 33.33%;
+}
+
+.spotify-results {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    font-family: 'Ranchers', cursive;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+footer h3 {
+    padding: 10px;
 }

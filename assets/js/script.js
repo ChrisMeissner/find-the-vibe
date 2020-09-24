@@ -167,14 +167,14 @@ const UIController = (function() {
 
             const html = 
             `
-            <div class="row small-12">
+            <div class="row spotify-results">
                 <img src="${img}" alt="">        
             </div>
-            <div class="row small-12">
-                <label for="Genre" class="form-label small-12">${title}:</label>
+            <div class="row spotify-results">
+                <label for="Genre" class="song-info">${title}:</label>
             </div>
-            <div class="row small-12">
-                <label for="artist" class="form-label small-12">By ${artist}:</label>
+            <div class="row spotify-results">
+                <label for="artist" class="song-info">By ${artist}:</label>
             </div> 
             <div>
                 <iframe src="https://open.spotify.com/embed?uri=${trackURI}" width="300" height="80" frameborder="0" allowtransparency="true" ></iframe>
