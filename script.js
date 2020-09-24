@@ -261,10 +261,9 @@ const APPController = (function(UICtrl, APICtrl) {
         const tracks = await APICtrl.getTracks(token, tracksEndPoint);
         // create a track list item
         tracks.forEach(el => UICtrl.createTrack(el.track.href, el.track.name, el.track.artists[0].name))
-        ticketmaster(el.track.arists[0].name) 
+        ticketMaster(el.track.arists[0].name) 
     });
 
-   
 
     // create song selection click event listener
     DOMInputs.tracks.addEventListener('click', async (e) => {
@@ -280,6 +279,9 @@ const APPController = (function(UICtrl, APICtrl) {
         // load the track details
         UICtrl.createTrackDetail(track.album.images[1].url, track.name, track.artists[0].name, track.uri);
     });   
+    
+   
+
     
     
 
