@@ -21,7 +21,7 @@ const APIController = (function() {
         return token */
     //}
     // private methods
-    
+    //? function(){} () => {}
     const _getToken = async () => {
 
         const result = await fetch('https://accounts.spotify.com/api/token' , {
@@ -40,7 +40,7 @@ const APIController = (function() {
     
     const _getGenres = async (token) => {
 
-        const result = await fetch(`https://api.spotify.com/v1/browse/categories?`, {
+        const result = await fetch(`https://api.spotify.com/v1/browse/categories?offset=0&limit=50&locale=sv_US`, {
             method: 'get',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
@@ -68,7 +68,7 @@ const APIController = (function() {
 
     const _getTracks = async (token, tracksEndPoint) => {
 
-        const limit = 25;
+        const limit = 30;
 
         const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
             method: 'GET',
@@ -153,8 +153,8 @@ const UIController = (function() {
         },
 
         // need method to create a track list group item 
-        createTrack(id, name) {
-            const html = `<a href="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}">${name}</a>`;
+        createTrack(id, name, artist) {
+            const html = `<a href="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}">${name} by ${artist}</a>`;
             document.querySelector(DOMElements.divSonglist).insertAdjacentHTML('beforeend', html);
         },
 
@@ -260,9 +260,11 @@ const APPController = (function(UICtrl, APICtrl) {
         // get the list of tracks
         const tracks = await APICtrl.getTracks(token, tracksEndPoint);
         // create a track list item
-        tracks.forEach(el => UICtrl.createTrack(el.track.href, el.track.name))
-        
+        tracks.forEach(el => UICtrl.createTrack(el.track.href, el.track.name, el.track.artists[0].name))
+        ticketmaster(el.track.arists[0].name) 
     });
+
+   
 
     // create song selection click event listener
     DOMInputs.tracks.addEventListener('click', async (e) => {
@@ -277,7 +279,9 @@ const APPController = (function(UICtrl, APICtrl) {
         const track = await APICtrl.getTrack(token, trackEndpoint);
         // load the track details
         UICtrl.createTrackDetail(track.album.images[1].url, track.name, track.artists[0].name, track.uri);
-    });    
+    });   
+    
+    
 
     return {
         init() {
