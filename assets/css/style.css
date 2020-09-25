@@ -11,14 +11,21 @@
     --quaternary: #DCA02F;
 }
 
+html, body {
+    height: 100%;
+}
+
 body, h2, h3 {
     font-family: 'Ranchers', cursive;
+    margin: 0;
 }
 
 .title {
     padding: 20px;
     display: flex;
     justify-content: center;
+    font-size: 4vw;
+    text-align: center;
 }
 
 .songs {
@@ -31,41 +38,87 @@ header {
     display: flex;
 }
 
+header img {
+    width: 60%;
+    padding: 25px;
+}
+
+.container {
+    display: table;
+    width: 100%;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.first, .second, .third {
+    display: table-cell;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
 .form-label {
     width: 40%;
-    font-size: 36px;
+    font-size: 2.5vw;
     padding: 10px 0px 5px 20px;
     color: var(--primary-color);
 }
 
 .form-control {
     width: 40%;
-    font-size: 25px;
+    font-size: 2vw;
     margin: 20px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
+/*First Column */
 .first {
     background-color: var(--secondary);
     color: var(--primary);
     width: 33.33%;
 }
 
-button {
-    color: var(--primary);
+#select_genre, #select_playlist {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 15px;
+    border-color: var(--primary);
+    opacity: 1;
+    transition: 0.3s;
 }
 
+#select_genre:hover, #select_playlist:hover {
+    opacity: 0.8;
+}
+
+#btn_submit {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-color: var(--primary);
+    font-size: 1vw;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+#btn_submit:hover {
+    opacity: 0.8;
+}
+
+/*Second Column */
 .second {
     background-color: var(--quaternary);
     color: var(--secondary);
     width: 33.33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .song-info {
@@ -73,6 +126,7 @@ button {
     color: var(--secondary);
 }
 
+/*Third Column */
 .third {
     background-color: var(--tertiary);
     color: var(--quaternary);
@@ -80,6 +134,7 @@ button {
 }
 
 .spotify-results {
+    font-size: 1vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -90,8 +145,34 @@ footer {
     font-family: 'Ranchers', cursive;
     background-color: var(--primary);
     color: var(--secondary);
+    font-size: 3vw;
 }
 
 footer h3 {
     padding: 10px;
+}
+
+
+/* Media Queries*/
+@media screen and (max-width: 980px) {
+    #btn_submit {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .first, .second, .third {
+        width: 100%;
+        display: column;
+    }
+
+    .form-control {
+        font-size:
+    }
 }
