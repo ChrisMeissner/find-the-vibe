@@ -154,8 +154,9 @@ const UIController = (function() {
 
         // need method to create a track list group item 
         createTrack(id, name, artist) {
-            const html = `<a href="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}">${name} by ${artist}</a>`;
+            const html = `<a href="#" class="list-group-item list-group-item-action list-group-item-light spotify-results" id="${id}">${name} by ${artist}</a>`;
             document.querySelector(DOMElements.divSonglist).insertAdjacentHTML('beforeend', html);
+            var divSonglist = document.createElement("ul");
         },
 
         // need method to create the song detail
@@ -261,7 +262,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const tracks = await APICtrl.getTracks(token, tracksEndPoint);
         // create a track list item
         tracks.forEach(el => UICtrl.createTrack(el.track.href, el.track.name, el.track.artists[0].name))
-        ticketMaster(el.track.arists[0].name) 
+       
     });
 
 

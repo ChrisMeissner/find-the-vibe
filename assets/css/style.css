@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #CB4B1A;
+  --secondary: #E9E5C2;
+  --tertiary: #058082;
+  --quaternary: #DCA02F;
+}
+
+body {
+  font-family: 'Ranchers', cursive;
+}
+
+h2 {
+  font-family: 'Ranchers', cursive;
+  text-align: center;
+}
+
+h3 {
+  font-size: 15px;
+  font-family: 'Ranchers', cursive;
+}
+
+.title {
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.songs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header {
+  background-color: var(--primary);
+  display: flex;
+}
+
+header img {
+  width: 65%;
+  padding: 25px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-label {
+  font-size: 36px;
+  padding: 10px 0px 5px 20px;
+  color: var(--primary-color);
+}
+
+.form-control {
+  font-size: 100%;
+  margin: 25px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.first {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: var(--secondary);
+  color: var(--primary);
+  width: 33.33%;
+}
+
+#select_genre, #select_playlist {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 15px;
+  border-color: var(--primary);
+}
+
+#btn_submit {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border-color: var(--primary);
+  font-size: 25px;
+}
+
+.second {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--quaternary);
+  color: var(--secondary);
+  width: 33.33%;
+}
+
+.song-info {
+  font-size: 20px;
+  color: var(--secondary);
+}
+
+.third {
+  background-color: var(--tertiary);
+  color: var(--quaternary);
+  width: 33.33%;
+}
+
+.spotify-results {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+footer {
+  font-family: 'Ranchers', cursive;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+footer h3 {
+  padding: 15px;
+}
+
+/* 2.4 - MEDIA QUERIES FOR SMALL SCREENS TO TABLETS */
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}
