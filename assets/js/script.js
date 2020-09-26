@@ -177,8 +177,8 @@ const UIController = (function() {
             <div class="row spotify-results">
                 <label for="artist" class="song-info">By ${artist}:</label>
             </div> 
-            <div>
-                <iframe src="https://open.spotify.com/embed?uri=${trackURI}" width="300" height="80" frameborder="0" allowtransparency="true" ></iframe>
+            <div class="spotify-album">
+                <iframe src="https://open.spotify.com/embed?uri=${trackURI}" width="300%" height="80%" frameborder="0" allowtransparency="true" ></iframe>
             </div>
             `;
 

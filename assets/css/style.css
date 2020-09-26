@@ -63,14 +63,14 @@ header img {
 
 .form-label {
     width: 40%;
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     padding: 10px 0px 5px 20px;
     color: var(--primary-color);
 }
 
 .form-control {
     width: 40%;
-    font-size: 2vw;
+    font-size: 1vw;
     margin: 20px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -121,9 +121,33 @@ header img {
     justify-content: center;
 }
 
+#song-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .song-info {
     font-size: 20px;
     color: var(--secondary);
+}
+
+.spotify-results {
+    font-size: 1.3vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.spotify-album {
+    display: flex;
+    width: 80%;
+}
+
+.song-list {
+    width: 80%;
 }
 
 /*Third Column */
@@ -131,14 +155,6 @@ header img {
     background-color: var(--tertiary);
     color: var(--quaternary);
     width: 33.33%;
-}
-
-.spotify-results {
-    font-size: 1vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
 }
 
 footer {
@@ -150,6 +166,7 @@ footer {
 
 footer h3 {
     padding: 10px;
+    font-size: 3vw;
 }
 
 
@@ -161,8 +178,8 @@ footer h3 {
 }
 
 @media screen and (max-width: 768px) {
-    .row {
-        
+    .spotify-results {
+        size: 6vw;
     }
 }
 
@@ -173,6 +190,10 @@ footer h3 {
     }
 
     .form-control {
-        font-size:
+        font-size:2vw;
+    }
+    
+    .second {
+        display: column;
     }
 }
